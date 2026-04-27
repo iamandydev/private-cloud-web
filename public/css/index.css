@@ -1,3 +1,4 @@
+/* VARIABLES */
 :root {
     --font-family: "Noto Sans", sans-serif;
     --font-size: 18px;
@@ -36,6 +37,7 @@
     --code-bg: #333;
 }
 
+/* CONTEXTO GLOBAL */
 * {
     margin: 0px;
     padding: 0px;
@@ -84,8 +86,9 @@ h3 {
     font-size: 1.5rem;
 }
 
+/* VARIANTES DE TEXTO */
 p {
-    font-weight: 300;
+    font-weight: 200;
 }
 
 a {
@@ -104,10 +107,6 @@ ul {
     list-style: none;
 }
 
-span {
-    display: inline-flex;
-}
-
 i.code {
     padding: 1px 4px 0px;
     color: var(--accent);
@@ -117,11 +116,23 @@ i.code {
     border-radius: var(--code-radius);
 }
 
+/* SECCIONES */
 .l {
+    /* ocupa todo el espacio*/
     width: calc(100% - var(--pd-2)) !important;
 }
 
-/* STATUS */
+span {
+    /* usado como contenedor distribuye los elementos como flex */
+    display: inline-flex;
+}
+
+section {
+    /* define una seccion */
+    padding: 40px var(--mng);
+}
+
+/* ESTADOS */
 
 .active {
     opacity: .5;
@@ -131,66 +142,7 @@ i.code {
     display: none !important;
 }
 
-/* ICONS */
-
-.icon-small {
-    font-size: 18px !important;
-}
-
-.icon-big {
-    font-size: 40px !important;
-}
-
-/* BUTTONS */
-
-button {
-    margin: var(--mng);
-    padding: var(--pd-2) var(--pd-1);
-    min-width: fit-content;
-    background: var(--accent);
-    border: unset;
-    border-radius: var(--border-radius);
-    color: var(--dark-text);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-button:hover {
-    /* background: var(--hover); */
-    opacity: .8;
-}
-
-.btn-secondary {
-    margin: var(--mng);
-    padding: var(--pd-2) var(--pd-1);
-    min-width: fit-content;
-    background: transparent;
-    border: var(--secondary) solid var(--border);
-    border-radius: var(--border-radius);
-    color: var(--secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 6px;
-}
-
-.btn-secondary:hover {
-    background: transparent;
-    border: var(--hover) solid var(--border);
-    color: var(--hover);
-}
-
-button:disabled {
-    opacity: .5;
-}
-
-button:disabled:hover {
-    background: var(--accent);
-}
-
-/* ALERT COLORS */
+/* USOS DE COLORES */
 
 /* bg */
 .d-bg {
@@ -234,6 +186,64 @@ button:disabled:hover {
     color: var(--desactivate-txt);
 }
 
+/* ICONS SIZE */
+
+.icon-small {
+    font-size: 18px !important;
+}
+
+.icon-big {
+    font-size: 40px !important;
+}
+
+/* BOTONES */
+
+button {
+    margin: var(--mng);
+    padding: var(--pd-2) var(--pd-1);
+    min-width: fit-content;
+    background: var(--accent);
+    border: unset;
+    border-radius: var(--border-radius);
+    color: var(--dark-text);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+button:hover {
+    opacity: .8;
+}
+
+.btn-secondary {
+    margin: var(--mng);
+    padding: var(--pd-2) var(--pd-1);
+    min-width: fit-content;
+    background: transparent;
+    border: var(--secondary) solid var(--border);
+    border-radius: var(--border-radius);
+    color: var(--secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.btn-secondary:hover {
+    background: transparent;
+    border: var(--hover) solid var(--border);
+    color: var(--hover);
+}
+
+button:disabled {
+    opacity: .5;
+}
+
+button:disabled:hover {
+    background: var(--accent);
+}
+
 /* INPUTS */
 
 .input-box {
@@ -248,7 +258,7 @@ button:disabled:hover {
     outline: var(--border) solid var(--accent);
 }
 
-
+/* PREVIEW DE DOCUMENTO */
 .create-document {
     padding: var(--pd-1);
     width: 180px;
@@ -262,12 +272,6 @@ button:disabled:hover {
     color: var(--secondary);
 }
 
-/* SECCIONES */
-section {
-    padding: 40px var(--mng);
-}
-
-/* Preview document file */
 .file-document {
     padding: var(--pd-1);
     width: 180px;
@@ -324,15 +328,6 @@ section {
 
 /* MODAL */
 .modal-container {
-    /* position: fixed;
-    z-index: 900;
-    top: 0px;
-    left: 0px;
-    width: 100%;
-    height: 100vh;
-    background: var(--dark-bg);
-    overflow: hidden; */
-
     position: fixed;
     top: 0;
     left: 0;
@@ -356,7 +351,7 @@ section {
     animation: showModal 0.2s ease-out;
 }
 
-/* USER MENU */
+/* ESTRUCTURA DROPDOWN */
 .dropdown-container {
     position: relative;
     display: flex;
@@ -457,7 +452,7 @@ table {
 }
 
 body.dark table {
-    border: .8px solid #fff;
+    border: .8px solid white;
 }
 
 th,
