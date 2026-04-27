@@ -1,0 +1,201 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMU | Inicio</title>
+    <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="../public/css/index.css" />
+
+    <!-- Google Icons -->
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="dark">
+    <main style="width: 80%; margin: auto">
+        <h1><i class="code">System UI</i></h1>
+        <br />
+        <section>
+            <h3>Titulos</h3>
+            <br />
+            <p>Estoy son lis estilos de titulos disponibles, en donde </p>
+            <div>
+                <h1 class="d-1">Display 1</h1>
+                <h2 class="d-2">Display 2</h2>
+                <h3 class="d-3">Display 3</h3>
+                <br>
+                <h1>Headline 1</h1>
+                <h2>Headline 2</h2>
+                <h3>Headline 3</h3>
+            </div>
+            <br />
+            <a href="">link 1</a>
+            <a href="" class="link">link 2</a>
+        </section>
+        <section>
+            <h3>Icons</h3>
+            <br />
+            <p>En este sistema UI se usan los recursos iconograficos y tipograficos de <a class="link" href="">Google
+                    Fonts</a>.
+            </p>
+            <div>
+                <span id="home" class="material-symbols-outlined active"> home </span>
+                <span class="material-symbols-outlined"> cards_stack </span>
+                <span class="material-symbols-outlined"> cloud_upload </span>
+                <span class="material-symbols-outlined"> add_circle </span>
+                <span id="userAvatar" class="material-symbols-outlined">
+                    account_circle
+                </span>
+            </div>
+            <br />
+        </section>
+        <hr />
+        <section>
+            <h3>Inputs</h3>
+            <br />
+            <div>
+                <input class="input-box" type="search" name="search" id="search" placeholder="search" />
+            </div>
+            <br />
+        </section>
+        <hr />
+        <section>
+            <h3>Modal</h3>
+            <br />
+            <div id="modalSettings" class="modal-container multiple hidden">
+                <div class="modal-content"></div>
+            </div>
+            <br />
+        </section>
+        <hr />
+        <section>
+            <h3>Dropdown</h3>
+            <br />
+            <div>
+                <div class="dropdown-container">
+                    <span class="material-symbols-outlined"
+                        onclick="expandDropdown('menuOneDropdown')">expand_circle_right</span>
+                    <ul id="menuOneDropdown" class="dropdown-menu hidden">
+                        <li class="dropdown-item">
+                            item
+                        </li>
+                        <li class="dropdown-item">
+                            item
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <hr />
+        <section>
+            <h3>Spinner</h3>
+            <br />
+            <div>
+                <!-- From Uiverse.io by rushik0507 -->
+                <svg viewBox="25 25 50 50" class="loader-container">
+                    <circle cx="50" cy="50" r="20" class="loader"></circle>
+                </svg>
+            </div>
+        </section>
+        <hr />
+        <section>
+            <h3>Tabs</h3>
+            <br />
+            <div></div>
+        </section>
+        <hr />
+        <section>
+            <h3>Table</h3>
+            <br />
+            <div></div>
+        </section>
+        <hr />
+        <section>
+            <h3>Buttons</h3>
+            <br />
+            <div>
+                <p>Estos son los estilos primordiales de un boton: estilo basico, con la propiedad <i
+                        class="code">disable</i>, con inconos, y en su bvariante <i class="code">secondary</i></p>
+                <span>
+                    <button>Primary</button>
+                    <button disabled="disabled">Disable</button>
+                    <button type="submit">
+                        Submit<span class="material-symbols-outlined"> upload </span>
+                    </button>
+                    <button type="reset">
+                        Reset<span class="material-symbols-outlined"> restart_alt </span>
+                    </button>
+                </span>
+                <br>
+                <p>Botones indicativos según su uso</p>
+                <span>
+                    <button class="d-txt d-bg">danger</button>
+                    <button class="w-txt w-bg">warning</button>
+                    <button class="a-txt a-bg">alert</button>
+                    <button class="s-txt s-bg">success</button>
+                    <button class="disable-txt disable-bg">success</button>
+                </span>
+                <br>
+                <p>
+                    El botón con la propiedad <i class="code">l</i> toma todo el espacio
+                    disponible o hasta llegar a su
+                    <i class="code">max-width</i>
+                </p>
+                <button class="btn-primary l">Large Button</button>
+            </div>
+        </section>
+        <hr />
+        <section>
+            <h3>Tables</h3>
+            <br />
+            <div>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>John</td>
+                            <td>Doe</td>
+                            <td>@social</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+    <script src="../public/js/home.js"></script>
+</body>
+
+</html>
