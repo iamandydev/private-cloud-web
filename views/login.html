@@ -1,53 +1,77 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMU | Acceso</title>
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CMU | Acceso</title>
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../public/css/index.css" />
+    <link rel="stylesheet" href="../public/css/login.css" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../public/css/index.css" />
-  <link rel="stylesheet" href="../public/css/login.css" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-  <!-- Google Icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body class="dark">
-  <main>
-    <div class="graphics">
-      <img class="brand" src="../assets/imgs/logo.jpg" alt="cmu logo" />
-      <img class="graphics-bg" src="../assets/imgs/johannes-schenk-ncQLjWIoLPs-unsplash.jpg" alt="" />
-      <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
-    </div>
-    <div class="form-space">
-      <div class="header">
-        <h2>Bienvenido</h2>
-        <p>Porfavor ingresa tu usuario y contraseña para acceder.</p>
+  <body class="dark">
+    <main>
+      <div class="graphics">
+        <img class="brand" src="../assets/imgs/logo.jpg" alt="cmu logo" />
+        <img
+          class="graphics-bg"
+          src="../assets/imgs/johannes-schenk-ncQLjWIoLPs-unsplash.jpg"
+          alt=""
+        />
+        <p class="text">Lorem ipsum dolor sit amet consectetur.</p>
       </div>
-      <form class="form" id="formLogin">
-        <input id="user" type="text" class="input-box l" placeholder="usuario" />
-        <input id="pass" type="password" class="input-box l" placeholder="contraseña" />
-        <button type="submit" class="l">
-          <span class="material-symbols-outlined icon-small"> login </span>
-          acceder
-        </button>
-      </form>
-    </div>
-  </main>
+      <div class="form-space">
+        <div class="header">
+          <h2>Bienvenido</h2>
+          <p>Porfavor ingresa tu usuario y contraseña para acceder.</p>
+        </div>
+        <form class="form" id="formLogin">
+          <input
+            id="user"
+            type="text"
+            class="input-box l"
+            placeholder="usuario"
+          />
+          <input
+            id="pass"
+            type="password"
+            class="input-box l"
+            placeholder="contraseña"
+          />
+          <button type="submit" class="l">
+            <span class="material-symbols-outlined icon-small"> login </span>
+            acceder
+          </button>
+        </form>
+      </div>
+    </main>
 
-  <script src="./login.js"></script>
-</body>
-
+    <script src="../public/js/login.js"></script>
+  </body>
 </html>
