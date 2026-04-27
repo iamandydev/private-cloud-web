@@ -33,6 +33,23 @@
       </button>
     </div>
   </div>
+
+  <div id="modalUpload" class="modal-container multiple hidden">
+    <div class="modal-content">
+      <button class="d-bg d-txt" onclick="closeModal('modalUpload')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="modalAdd" class="modal-container multiple hidden">
+    <div class="modal-content">
+      <button class="d-bg d-txt" onclick="closeModal('modalAdd')">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+    </div>
+  </div>
+
   <nav>
     <span id="home" class="material-symbols-outlined active"> home </span>
     <span class="material-symbols-outlined"><a href="">cards_stack</a></span>
@@ -46,8 +63,8 @@
         </li>
       </ul>
     </div>
-    <span class="material-symbols-outlined"> cloud_upload </span>
-    <span class="material-symbols-outlined"> add_circle </span>
+    <span class="material-symbols-outlined" onclick="openModal('modalUpload')"> cloud_upload </span>
+    <span class="material-symbols-outlined" onclick="openModal('modalAdd')"> add_circle </span>
 
     <div class="dropdown-container">
       <span id="user" class="material-symbols-outlined" onclick="expandDropdown('user')">
