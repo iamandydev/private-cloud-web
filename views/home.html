@@ -1,236 +1,271 @@
 <!doctype html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CMU | Inicio</title>
+    <link
+      rel="icon"
+      type="image/png"
+      href="../assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link
+      rel="icon"
+      type="image/svg+xml"
+      href="../assets/favicon/favicon.svg"
+    />
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../assets/favicon/apple-touch-icon.png"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CMU | Inicio</title>
-  <link rel="icon" type="image/png" href="../assets/favicon/favicon-96x96.png" sizes="96x96" />
-  <link rel="icon" type="image/svg+xml" href="../assets/favicon/favicon.svg" />
-  <link rel="shortcut icon" href="../assets/favicon/favicon.ico" />
-  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="../public/css/index.css" />
+    <link rel="stylesheet" href="../public/css/home.css" />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="../public/css/index.css" />
-  <link rel="stylesheet" href="../public/css/home.css" />
+    <!-- Google Icons -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
 
-  <!-- Google Icons -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
-    rel="stylesheet" />
-</head>
-
-<body class="dark">
-  <div id="modalSettings" class="modal-container multiple hidden">
-    <div class="modal-content">
-      <button class="d-bg d-txt" onclick="closeModal('modalSettings')">
-        <span class="material-symbols-outlined">close</span>
-      </button>
+  <body class="dark">
+    <div id="modalSettings" class="modal-container multiple hidden">
+      <div class="modal-content">
+        <button class="d-bg d-txt" onclick="closeModal('modalSettings')">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <div id="modalUpload" class="modal-container multiple hidden">
-    <div class="modal-content">
-      <button class="d-bg d-txt" onclick="closeModal('modalUpload')">
-        <span class="material-symbols-outlined">close</span>
-      </button>
+    <div id="modalUpload" class="modal-container multiple hidden">
+      <div class="modal-content">
+        <button class="d-bg d-txt" onclick="closeModal('modalUpload')">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <div id="modalAdd" class="modal-container multiple hidden">
-    <div class="modal-content">
-      <button class="d-bg d-txt" onclick="closeModal('modalAdd')">
-        <span class="material-symbols-outlined">close</span>
-      </button>
+    <div id="modalAdd" class="modal-container multiple hidden">
+      <div class="modal-content">
+        <button class="d-bg d-txt" onclick="closeModal('modalAdd')">
+          <span class="material-symbols-outlined">close</span>
+        </button>
+      </div>
     </div>
-  </div>
 
-  <nav>
-    <span id="home" class="material-symbols-outlined active"> home </span>
-    <span class="material-symbols-outlined"><a href="">cards_stack</a></span>
-    <div class="dropdown-container">
-      <input class="input-box" type="search" name="search" id="searchBox" placeholder="search"
-        onclick="expandDropdown('searchBox')" />
+    <nav>
+      <span id="home" class="material-symbols-outlined active">home </span>
+      <span class="material-symbols-outlined">cards_stack</span>
+      <div class="dropdown-container">
+        <input
+          class="input-box"
+          type="search"
+          name="search"
+          id="searchBox"
+          placeholder="search"
+          onclick="expandDropdown('searchBox')"
+        />
 
-      <ul id="searchBoxDropdown" class="dropdown-menu hidden">
-        <li class="dropdown-item">
-          <p>Aun no hay resultados...</p>
-        </li>
-      </ul>
-    </div>
-    <span class="material-symbols-outlined" onclick="openModal('modalUpload')"> cloud_upload </span>
-    <span class="material-symbols-outlined" onclick="openModal('modalAdd')"> add_circle </span>
-
-    <div class="dropdown-container">
-      <span id="user" class="material-symbols-outlined" onclick="expandDropdown('user')">
-        account_circle
+        <ul id="searchBoxDropdown" class="dropdown-menu hidden">
+          <li class="dropdown-item">
+            <p>Aun no hay resultados...</p>
+          </li>
+        </ul>
+      </div>
+      <span
+        class="material-symbols-outlined"
+        onclick="openModal('modalUpload')"
+      >
+        cloud_upload
       </span>
-      <ul id="userDropdown" class="dropdown-menu hidden">
-        <li class="dropdown-item" onclick="openModal('modalSettings')">
-          <p>Ajustes</p>
-          <span class="material-symbols-outlined">Settings</span>
-        </li>
-        <li class="dropdown-item">
-          <p>cerrar sesión</p>
-          <span class="material-symbols-outlined">logout</span>
-        </li>
-      </ul>
-    </div>
-  </nav>
-  <main>
-    <h2 class="d-3">Bienvenido, user</h2>
-    <section class="top-section">
-      <h3>Recientes</h3>
-      <div class="carrusel-container">
-        <ul>
-          <li>
-            <article class="create-document">
-              <span class="material-symbols-outlined icon-big">add_circle</span>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="storage-section">
-      <h3>Tus Archivo</h3>
-      <div class="storage-container">
-        <ul>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-          <li>
-            <article class="file-document">
-              <h3>title</h3>
-              <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Perferendis consequuntur aspernatur tenetur neque ut deserunt
-                ipsa error dolore.
-              </p>
-              <ul class="tags">
-                <li class="tag">tag 1</li>
-                <li class="tag">tag 2</li>
-              </ul>
-            </article>
-          </li>
-        </ul>
-      </div>
-    </section>
-  </main>
-  <script src="../public/js/home.js"></script>
-</body>
+      <span class="material-symbols-outlined" onclick="openModal('modalAdd')">
+        add_circle
+      </span>
 
+      <div class="dropdown-container">
+        <span
+          id="user"
+          class="material-symbols-outlined"
+          onclick="expandDropdown('user')"
+        >
+          account_circle
+        </span>
+        <ul id="userDropdown" class="dropdown-menu hidden">
+          <li class="dropdown-item" onclick="openModal('modalSettings')">
+            <p>Ajustes</p>
+            <span class="material-symbols-outlined">Settings</span>
+          </li>
+          <li class="dropdown-item">
+            <p>cerrar sesión</p>
+            <span class="material-symbols-outlined">logout</span>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <h2 class="d-3">Bienvenido, user</h2>
+      <section class="top-section">
+        <h3>Recientes</h3>
+        <div class="carrusel-container">
+          <ul>
+            <li>
+              <article class="create-document">
+                <span class="material-symbols-outlined icon-big"
+                  >add_circle</span
+                >
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="storage-section">
+        <h3>Tus Archivo</h3>
+        <div class="storage-container">
+          <ul>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+            <li>
+              <article class="file-document">
+                <h3>title</h3>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Perferendis consequuntur aspernatur tenetur neque ut deserunt
+                  ipsa error dolore.
+                </p>
+                <ul class="tags">
+                  <li class="tag">tag 1</li>
+                  <li class="tag">tag 2</li>
+                </ul>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <script src="../public/js/home.js"></script>
+  </body>
 </html>
