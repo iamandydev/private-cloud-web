@@ -343,12 +343,39 @@ button:disabled:hover {
 
 .modal-content {
     padding: 10px;
-    background: #fff;
+    background: var(--ligth-bg);
     width: 480px;
     border-radius: 16px;
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
     overflow: hidden;
     animation: showModal 0.2s ease-out;
+}
+
+body.dark .modal-content {
+    background: var(--dark-bg);
+}
+
+/* Header */
+.modal-header {
+    padding: var(--pd-1) var(--pd-2);
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+/* Body */
+.modal-body {
+    padding: var(--pd-1) var(--pd-2);
+}
+
+/* Footer */
+.modal-footer {
+    padding: var(--pd-1) var(--pd-2);
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
 }
 
 /* ESTRUCTURA DROPDOWN */
