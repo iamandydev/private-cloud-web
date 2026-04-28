@@ -46,7 +46,10 @@
       <div class="modal-content">
         <div class="modal-header">
           Settings
-          <span class="d-bg d-txt" onclick="closeModal('modalSettings')">
+          <span
+            class="border-50 d-bg d-txt"
+            onclick="closeModal('modalSettings')"
+          >
             <span class="material-symbols-outlined icon-small">close</span>
           </span>
         </div>
@@ -74,8 +77,10 @@
     </div>
 
     <nav>
-      <span id="home" class="material-symbols-outlined active">home </span>
-      <span class="material-symbols-outlined">cards_stack</span>
+      <span id="home" class="material-symbols-outlined click active"
+        >home
+      </span>
+      <span class="material-symbols-outlined click">cards_stack</span>
       <div class="dropdown-container">
         <input
           class="input-box"
@@ -93,19 +98,22 @@
         </ul>
       </div>
       <span
-        class="material-symbols-outlined"
+        class="material-symbols-outlined click"
         onclick="openModal('modalUpload')"
       >
         cloud_upload
       </span>
-      <span class="material-symbols-outlined" onclick="openModal('modalAdd')">
+      <span
+        class="material-symbols-outlined click"
+        onclick="openModal('modalAdd')"
+      >
         add_circle
       </span>
 
       <div class="dropdown-container">
         <span
           id="user"
-          class="material-symbols-outlined"
+          class="material-symbols-outlined click"
           onclick="expandDropdown('user')"
         >
           account_circle
