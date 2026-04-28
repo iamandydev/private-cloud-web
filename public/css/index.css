@@ -157,23 +157,44 @@ section {
 
 /* bg */
 .d-bg {
-    background: var(--danger-bg);
+    background: var(--danger-bg) !important;
 }
 
 .w-bg {
-    background: var(--warning-bg);
+    background: var(--warning-bg) !important;
 }
 
 .a-bg {
-    background: var(--alert-bg);
+    background: var(--alert-bg) !important;
 }
 
 .s-bg {
-    background: var(--success-bg);
+    background: var(--success-bg) !important;
 }
 
 .disable-bg {
-    background: var(--desactivate-bg);
+    background: var(--desactivate-bg) !important;
+}
+
+/* hover */
+.sub-d-bg:hover {
+    background: var(--danger-bg) !important;
+}
+
+.sub-w-bg:hover {
+    background: var(--warning-bg) !important;
+}
+
+.sub-a-bg:hover {
+    background: var(--alert-bg) !important;
+}
+
+.sub-s-bg:hover {
+    background: var(--success-bg) !important;
+}
+
+.sub-disable-bg:hover {
+    background: var(--desactivate-bg) !important;
 }
 
 /* text */
